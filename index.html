@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <title>Redirecting to English site…</title>
 
-  <!-- Meta refresh as a fallback -->
+  <!-- Meta refresh as a fallback (also keeps history) -->
   <meta http-equiv="refresh" content="0;url=https://entrepot.as-colle.com/?lang=en" />
 
   <script>
-    // Use JavaScript to redirect immediately
     (function () {
       var target = "https://entrepot.as-colle.com/?lang=en";
-      // replace() avoids keeping the intermediate page in browser history
-      window.location.replace(target);
+      // This keeps warehouse.as-colle.com in history
+      window.location.href = target;
+      // Or: window.location.assign(target);
     })();
   </script>
 </head>
